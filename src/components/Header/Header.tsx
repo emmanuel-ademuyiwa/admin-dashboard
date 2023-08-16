@@ -6,6 +6,7 @@ interface HeaderProps {
   title: string;
   subtitle: string;
 }
+
 const Header: FC<HeaderProps> = ({ title, subtitle }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
