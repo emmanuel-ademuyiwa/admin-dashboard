@@ -27,17 +27,18 @@ const Item = ({ title, to, icon, selected, setSelected }: ItemsProps) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
-    <MenuItem
-      active={selected === title}
-      style={{
-        color: colors.grey[100],
-      }}
-      onClick={() => setSelected(title)}
-      icon={icon}
-    >
-      <Typography>{title}</Typography>
-      <Link to={to} />
-    </MenuItem>
+    <Link to={to} style={{ textDecoration: 'none' }}>
+      <MenuItem
+        active={selected === title}
+        style={{
+          color: colors.grey[100],
+        }}
+        onClick={() => setSelected(title)}
+        icon={icon}
+      >
+        <Typography>{title}</Typography>
+      </MenuItem>
+    </Link>
   );
 };
 
@@ -63,7 +64,7 @@ const SideBar = () => {
         '& .ps-menu-button:hover': {
           color: '#868dfb !important',
         },
-        '& .ps-menu-button.active': {
+        '& .ps-menu-button.ps-active': {
           color: '#6870fa !important',
         },
       }}
