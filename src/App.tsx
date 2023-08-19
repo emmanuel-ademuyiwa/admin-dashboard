@@ -7,6 +7,7 @@ import Sidebar from './scenes/Global/Sidebar/Sidebar';
 import Team from './scenes/Team/Team';
 import Contacts from './scenes/Contacts/Contacts';
 import Invoices from './scenes/Invoices/Invoices';
+import ProfileForm from './scenes/ProfileForm/ProfileForm';
 function App() {
   const [theme, colorMode] = useMode();
 
@@ -23,6 +24,7 @@ function App() {
               <Route path='/team' element={<Team />} />
               <Route path='/contacts' element={<Contacts />} />
               <Route path='/invoices' element={<Invoices />} />
+              <Route path='/profile-form' element={<ProfileForm />} />
             </Routes>
           </main>
         </div>
