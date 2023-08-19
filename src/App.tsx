@@ -10,30 +10,41 @@ import Invoices from './scenes/Invoices/Invoices';
 import ProfileForm from './scenes/ProfileForm/ProfileForm';
 import Calendar from './scenes/Calender/Calender';
 import FAQ from './scenes/Faq/Faq';
+import Bar from './scenes/Bar/Bar';
+import Pie from './scenes/Pie/Pie';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import Line from './scenes/Line/Line';
+import Geography from './scenes/Geography/Geography';
 function App() {
   const [theme, colorMode] = useMode();
 
   return (
-    <ColorModeContext.Provider value={colorMode}>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <div className='app'>
-          <Sidebar />
-          <main className='content'>
-            <Topbar />
-            <Routes>
-              <Route path='/' element={<Dashboard />} />
-              <Route path='/team' element={<Team />} />
-              <Route path='/contacts' element={<Contacts />} />
-              <Route path='/invoices' element={<Invoices />} />
-              <Route path='/profile-form' element={<ProfileForm />} />
-              <Route path='/calendar' element={<Calendar />} />
-              <Route path='/faq' element={<FAQ />} />
-            </Routes>
-          </main>
-        </div>
-      </ThemeProvider>
-    </ColorModeContext.Provider>
+    <ScrollToTop>
+      <ColorModeContext.Provider value={colorMode}>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <div className='app'>
+            <Sidebar />
+            <main className='content'>
+              <Topbar />
+              <Routes>
+                <Route path='/' element={<Dashboard />} />
+                <Route path='/team' element={<Team />} />
+                <Route path='/contacts' element={<Contacts />} />
+                <Route path='/invoices' element={<Invoices />} />
+                <Route path='/profile-form' element={<ProfileForm />} />
+                <Route path='/calendar' element={<Calendar />} />
+                <Route path='/faq' element={<FAQ />} />
+                <Route path='/bar' element={<Bar />} />
+                <Route path='/pie' element={<Pie />} />
+                <Route path='/line' element={<Line />} />
+                <Route path='/geography' element={<Geography />} />
+              </Routes>
+            </main>
+          </div>
+        </ThemeProvider>
+      </ColorModeContext.Provider>
+    </ScrollToTop>
   );
 }
 
