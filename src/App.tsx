@@ -5,6 +5,7 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 import Dashboard from './scenes/Dashboard/Dashboard';
 import Sidebar from './scenes/Global/Sidebar/Sidebar';
 import Team from './scenes/Team/Team';
+import Contacts from './scenes/Contacts/Contacts';
 function App() {
   const [theme, colorMode] = useMode();
 
@@ -19,6 +20,7 @@ function App() {
             <Routes>
               <Route path='/' element={<Dashboard />} />
               <Route path='/team' element={<Team />} />
+              <Route path='/contacts' element={<Contacts />} />
             </Routes>
           </main>
         </div>
